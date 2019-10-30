@@ -63,6 +63,96 @@ Make sure that g++ is in your path and that you are running it in the directory 
 
 You can compile C/C++ programs using makefile. For more details, you can check our 'Makefile
 
+# C++ template for fast input in Competitve Programming:
+#include <bits/stdc++.h>
+using namespace std;
+
+ 
+#define Mset(s, n)      memset(s, n, sizeof(s))
+#define Rp(i, m)        for(int i = 0; i < m; ++i)
+#define Rpd(i, m, l)    for(int i = l; i >= m; --i)
+#define Rpp(i ,m)       for(int i = 1; i <= m; ++i)
+#define All(a)          (a).begin(), (a).end()
+#define Lwb             lower_bound
+#define Upb             upper_bound
+#define Sz(a)           int((a).size())
+#define Exist(a, b)     (find(All(a), (b)) != (a).end())
+#define Sort(x)         sort(All(x))
+#define Gsort(x)        sort(All(x), greater<typeof(*((x).begin()))>())
+#define Unique(v)       Sort(v); (v).resize(unique(ALL(v)) - (v).begin())
+ 
+#define fi              first
+#define se              second
+#define pb              push_back
+#define pf              push_front
+#define is              insert
+#define ull             unsigned ll
+#define ld              long double
+#define u_map           unordered_map
+#define pii             pair<int, int>
+#define vi              vector<int>
+#define vpii            vector<pii>
+#define imax            INT_MAX
+#define imin			INT_MIN
+#define ool             LLONG_MAX
+#define ll              long long
+ 
+// This function takes the input from stdin in the fastest way possible.
+void fastscan(int &number) 
+{ 
+    //variable to indicate sign of input number 
+    bool negative = false; 
+    register int c; 
+  
+    number = 0; 
+  
+    // extract current character from buffer 
+    c = getchar(); 
+    if (c=='-') 
+    { 
+        // number is negative 
+        negative = true; 
+  
+        // extract the next character from the buffer 
+        c = getchar(); 
+    } 
+  
+    // Keep on extracting characters if they are integers 
+    // i.e ASCII Value lies from '0'(48) to '9' (57) 
+    for (; (c>47 && c<58); c=getchar()) 
+        number = number *10 + c - 48; 
+  
+    // if scanned input has a negative sign, negate the 
+    // value of the input number 
+    if (negative) 
+        number *= -1; 
+} 
+
+
+const ll MOD = (ll) 1e9 + 7;
+const ld PI = acos((ld) -1);
+inline int Get_bit(int x, int k){return (x >> (k - 1)) & 1;}
+inline ll Gcd(ll a, ll b) {ll r; while(b){ r = a % b; a = b; b = r;} return a;}
+inline ll Lcm(ll a, ll b) {return a / Gcd(a, b) * b;}
+inline ll Pow(ll n, ll k) {ll r = 1; for(; k; k >>= 1, n = n * n % MOD){if(k & 1) r = r * n % MOD;} return r;}
+const int base = 311;
+ 
+const int N = 3e3 + 5;
+
+int main()
+	{
+    	ios_base::sync_with_stdio(false);
+    	cin.tie(NULL);
+
+
+
+
+
+
+    	return 0;
+	} 	
+
+
 # C++ function for Binary search in an array
 
 int binarySearch(int array[], int left, int right, int element)
